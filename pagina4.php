@@ -17,6 +17,10 @@
     <label>
         <input type="color" name="colorInput" value="FFFFFF">
     </label>
+    <label class="SubmitColor">
+        <input type="submit" value="EnviarColor">
+    </label>
+    
 <?php
     include("includes/footer.html");
 ?>
