@@ -3,22 +3,20 @@
 ?>
     <h1>Tria color</h1>
     <label class="custom-radio">
-            <input type="radio" name="color" value="color1">
-            <span class="radio-checkmark"></span>
-        </label>
-        <label class="custom-radio">
-            <input type="radio" name="color" value="color2">
-            <span class="radio-checkmark"></span>
-        </label>
-        <label class="custom-radio">
-            <input type="radio" name="color" value="color3">
-            <span class="radio-checkmark"></span>
-        </label>
-        <label class="custom-radio">
-            <input type="radio" name="color" value="color4">
-            <span class="radio-checkmark"></span>
-        </label>
-    <input type="color" id="colorInput">
+        <input type="radio" name="colorRadio" value="color1">
+    </label>
+    <label class="custom-radio">
+        <input type="radio" name="colorRadio" value="color2">
+    </label>
+    <label class="custom-radio">
+        <input type="radio" name="colorRadio" value="color3">
+    </label>
+    <label class="custom-radio">
+        <input type="radio" name="colorRadio" value="color4">
+    </label>
+    <label>
+        <input type="color" name="colorInput" value="FFFFFF">
+    </label>
 <?php
     include("includes/footer.html");
 ?>
