@@ -1,40 +1,42 @@
 <?php
-    $cookie_name = "Color";
-    $cookie_value = "#FFFFFF";
-    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+
+    if(isset($_REQUEST["color"])) $cookie_value = $_REQUEST["color"];
+    else if (isset($_REQUEST["colorPersonalitzat"])) $cookie_value = $_REQUEST["colorPersonalitzat"];
+    else $cookie_value = "#FFFFFF";
+
+    $cookie_name = "Color_escogido";
+    
+    setcookie($cookie_name, $cookie_value, time() + 3600, "/");
     include("includes/header.html");
 ?>
-    <h1>Tria color</h1>
     <style>
         html, body{
-            background-color: <?php echo htmlspecialchars($cookie_value)?>;
+            background-color: <?php if(isset($_REQUEST["color"])) echo $_REQUEST["color"]; else if (isset($_REQUEST["colorPersonalitzat"])) echo $_REQUEST["colorPersonalitzat"];?>
         }
     </style>
-    <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST">
+<body>
+    <h1>Tria color</h1>
+
+    <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="get">
         <label class="custom-radio">
-            <input type="radio" name="Colorvalue" value="#FFFF00">
+            <input type="radio" name="color" value="#FFFF00">
         </label>
         <label class="custom-radio">
-            <input type="radio" name="Colorvalue" value="#FF7070">
+            <input type="radio" name="color" value="#FF7070">
         </label>
         <label class="custom-radio">
-            <input type="radio" name="Colorvalue" value="#00AAFF">
+            <input type="radio" name="color" value="#00AAFF">
         </label>
         <label class="custom-radio">
-            <input type="radio" name="Colorvalue" value="#FF9500">
+            <input type="radio" name="color" value="#FF9500">
         </label>
         <label>
-            <input type="color" name="Colorvalue" value="#FFFFFF">
+            <input type="color" name="colorPersonalitzat" value="#adfac6">
         </label>
         <label class="SubmitColor">
             <input type="submit">
         </label>
     </form>
-    
 <?php
-    $cookie_value = $_POST[]
-    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
-    echo $cookie_name;
-    echo $cookie_value;
     include("includes/footer.html");
 ?>
