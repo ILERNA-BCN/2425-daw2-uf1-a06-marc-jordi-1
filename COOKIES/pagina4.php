@@ -1,12 +1,5 @@
 <?php
-
-    if(isset($_REQUEST["color"])) $cookie_value = $_REQUEST["color"];
-    else if (isset($_REQUEST["colorPersonalitzat"])) $cookie_value = $_REQUEST["colorPersonalitzat"];
-    else $cookie_value = "#FFFFFF";
-
-    $cookie_name = "Color_escogido";
-    
-    setcookie($cookie_name, $cookie_value, time() + 3600, "/");
+    include("includes/cookie.php");
     include("includes/header.html");
 ?>
     <style>
@@ -31,7 +24,7 @@
             <input type="radio" name="color" value="#FF9500">
         </label>
         <label>
-            <input type="color" name="colorPersonalitzat" value="#adfac6">
+            <input type="color" name="colorPersonalitzat" value="<?php if(!isset($_REQUEST["color"])) echo "#adfac6"; else echo $_COOKIE[$cookie_name]?>">
         </label>
         <label class="SubmitColor">
             <input type="submit">
