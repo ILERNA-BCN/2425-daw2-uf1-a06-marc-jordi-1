@@ -1,7 +1,17 @@
 <?php
+    include("includes/cookie.php");
     include("includes/header.html");
 ?>
-
+    <style>
+        html, body{
+            background-color: <?php echo $_COOKIE[$cookie_name];?>
+        }
+    </style>
+<body>
+    <nav>
+        <a href="pagina1.php">Pàgina 1</a> <a href="pagina2.php">Pàgina 2</a> <a href="pagina3.php">Pàgina 3</a> <a href="pagina4.php">Pàgina 4</a>
+    </nav>
+    <br/><br/>
     <h1>PÀGINA 2</h1>
     <table>
             <tr>

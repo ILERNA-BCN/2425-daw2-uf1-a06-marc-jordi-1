@@ -8,6 +8,10 @@
         }
     </style>
 <body>
+    <nav>
+        <a href="pagina1.php">Pàgina 1</a> <a href="pagina2.php">Pàgina 2</a> <a href="pagina3.php">Pàgina 3</a> <a href="pagina4.php">Pàgina 4</a>
+    </nav>
+    <br/><br/>
     <h1>Tria color</h1>
 
     <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="get">
@@ -24,7 +28,7 @@
             <input type="radio" name="color" value="#FF9500">
         </label>
         <label>
-            <input type="color" name="colorPersonalitzat" value="<?php if(!isset($_REQUEST["color"])) echo "#adfac6"; else echo $_COOKIE[$cookie_name]?>">
+            <input type="color" name="colorPersonalitzat" value="<?php if(isset($_REQUEST["color"]) || isset($_REQUEST["colorPersonalitzat"])) echo $_COOKIE[$cookie_name];?>">
         </label>
         <label class="SubmitColor">
             <input type="submit">
