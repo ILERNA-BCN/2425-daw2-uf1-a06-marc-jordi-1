@@ -28,7 +28,7 @@
             <input type="radio" name="color" value="#FF9500">
         </label>
         <label>
-            <input type="color" name="colorPersonalitzat" value="<?php if(isset($_REQUEST["color"]) || isset($_REQUEST["colorPersonalitzat"])) echo $_COOKIE[$cookie_name];?>">
+            <input type="color" name="colorPersonalitzat" value="<?php if (isset($_COOKIE[$cookie_name])) echo $_COOKIE[$cookie_name]; else echo "#adfac6";?>">
         </label>
         <label class="SubmitColor">
             <input type="submit">
