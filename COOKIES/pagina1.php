@@ -1,7 +1,6 @@
 <?php
     include("includes/cookie.php");
     include("includes/header.html");
-    echo $_COOKIE[$cookie_name];
 ?>
     <style>
         html, body{

@@ -7,7 +7,6 @@ body {
     display: block;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 nav {
@@ -24,6 +23,15 @@ h1 {
     text-align: center;
     color: #333;
     margin-top: 20px;
+}
+
+.colorForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 470px;
+    text-align: center;
+    width: 50%;
 }
 
 table {
@@ -64,8 +72,32 @@ input[type="submit"] {
     font-size: 16px;
 }
 
+input[type="color"]{
+    width: 150px;
+    height: 50px;
+}
+
+.radioInputs{
+    display:block;
+}
+
+.submitColor{
+    margin-top: 10px;
+    width: 20%;
+}
+
+.customColor{
+    width: 150px;
+}
+
 input[type="submit"]:hover {
     background-color: #45a049;
+}
+
+input[type="radio"]{
+    display:table-row;
+    width: 100px;
+    height: 100px;
 }
 
 td.img {
