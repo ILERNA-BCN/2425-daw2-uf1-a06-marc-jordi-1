@@ -17,16 +17,16 @@
     <form class="colorForm" action="includes/cookie.php" method="get">
         <div class="radioInputs" style:="display:block;">
             <label class="custom-radio">
-                <input type="radio" name="color" value="#FFFF00">
+                <input type="radio" name="color" value="yellow" style="accent-color: #FFFF00;">
             </label>
             <label class="custom-radio">
-                <input type="radio" name="color" value="#FF7070">
+                <input type="radio" name="color" value="#FF7070" style="accent-color: #FF7070;">
             </label>
             <label class="custom-radio">
-                <input type="radio" name="color" value="#00AAFF">
+                <input type="radio" name="color" value="#00AAFF" style="accent-color: #00AAFF;">
             </label>
             <label class="custom-radio">
-                <input type="radio" name="color" value="#FF9500">
+                <input type="radio" name="color" value="#FF9500" style="accent-color: #FF9500;">
             </label>
         </div>
             <br/>
