@@ -15,7 +15,7 @@
     <h1>Tria color</h1>
 
     <form class="colorForm" action="includes/cookie.php" method="get">
-        <div class="radioInputs">
+        <div class="radioInputs" style:="display:block;">
             <label class="custom-radio">
                 <input type="radio" name="color" value="#FFFF00">
             </label>
@@ -30,12 +30,19 @@
             </label>
         </div>
             <br/>
-            <label class="customColor">
+            <label class="customColor" style="width: 150px;">
                 <input type="color" name="colorPersonalitzat" value="<?php if (isset($_COOKIE[$cookie_name])) echo $_COOKIE[$cookie_name]; else echo "#adfac6";?>">
             </label>
-        <div class="submitColor">
-            <label>
+        <div class="submitColor" style="width: 20%;">
+            <label class="pag4">
                 <input type="submit">
+            </label>
+        </div>
+    </form>
+    <form class="colorForm" action="includes/cookie.php" method="get">
+        <div class="submitColor" style="width: 10%;">
+            <label class="pag4">
+                <input type="submit" name="reset" value="Reset" style="margin-top: 10px;">
             </label>
         </div>
     </form>

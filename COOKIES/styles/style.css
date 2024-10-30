@@ -77,17 +77,13 @@ input[type="color"]{
     height: 50px;
 }
 
-.radioInputs{
-    display:block;
-}
-
 .submitColor{
     margin-top: 10px;
-    width: 20%;
 }
 
-.customColor{
-    width: 150px;
+label.pag4{
+    display: block;
+    margin-top: 10px;
 }
 
 input[type="submit"]:hover {

@@ -8,6 +8,8 @@
     } else if (isset($_REQUEST["colorPersonalitzat"])){
         $cookie_value = $_REQUEST["colorPersonalitzat"];  
         setcookie($cookie_name, $cookie_value, time() + 3600, "/");
+    } else if (isset($_REQUEST["reset"])){
+        setcookie($cookie_name, $cookie_value, time() - 1, "/");
     }
 
     header("Location: ../pagina4.php");
