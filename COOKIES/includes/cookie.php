@@ -1,10 +1,14 @@
 <?php
 
-    if(isset($_REQUEST["color"])) $cookie_value = $_REQUEST["color"];
-    else if (isset($_REQUEST["colorPersonalitzat"])) $cookie_value = $_REQUEST["colorPersonalitzat"];
-    else $cookie_value = "#adfac6";
-    
     $cookie_name ="Color_escogido";
-    
-    setcookie($cookie_name, $cookie_value, time() + 3600, "/");
+
+    if(isset($_REQUEST["color"])){
+        $cookie_value = $_REQUEST["color"];
+        setcookie($cookie_name, $cookie_value, time() + 3600, "/"); 
+    } else if (isset($_REQUEST["colorPersonalitzat"])){
+        $cookie_value = $_REQUEST["colorPersonalitzat"];  
+        setcookie($cookie_name, $cookie_value, time() + 3600, "/");
+    }
+
+    header("Location: ../pagina4.php");
 ?>

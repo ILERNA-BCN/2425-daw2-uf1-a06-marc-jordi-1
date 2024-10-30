@@ -1,10 +1,10 @@
 <?php
-    include("includes/cookie.php");
     include("includes/header.html");
+
 ?>
     <style>
         html, body{
-            background-color: <?php if(isset($_REQUEST["color"])) echo $_REQUEST["color"]; else if (isset($_REQUEST["colorPersonalitzat"])) echo $_REQUEST["colorPersonalitzat"];?>
+            background-color: <?php echo $_COOKIE["Color_escogido"];?> 
         }
     </style>
 <body>
@@ -14,7 +14,7 @@
     <br/><br/>
     <h1>Tria color</h1>
 
-    <form class="colorForm" action="<?php echo $_SERVER["PHP_SELF"];?>" method="get">
+    <form class="colorForm" action="includes/cookie.php" method="get">
         <div class="radioInputs">
             <label class="custom-radio">
                 <input type="radio" name="color" value="#FFFF00">

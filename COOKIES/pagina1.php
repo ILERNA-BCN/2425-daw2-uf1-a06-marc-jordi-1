@@ -1,10 +1,9 @@
 <?php
-    include("includes/cookie.php");
     include("includes/header.html");
 ?>
     <style>
         html, body{
-            background-color: <?php echo $_COOKIE[$cookie_name];?>
+            background-color: <?php echo $_COOKIE["Color_escogido"];?>
         }
     </style>
 <body>
