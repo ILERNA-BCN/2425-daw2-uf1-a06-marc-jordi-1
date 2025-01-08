@@ -4,7 +4,7 @@
 ?>
     <style>
         html, body{
-            background-color: <?php echo $_COOKIE["Color_escogido"];?> 
+            background-color: <?php echo $_COOKIE["Color_escogido"];?>
         }
     </style>
 <body>
