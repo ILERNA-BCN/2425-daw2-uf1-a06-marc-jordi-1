@@ -5,12 +5,11 @@
     if(isset($_REQUEST["color"])){
         $cookie_value = $_REQUEST["color"];
         setcookie($cookie_name, $cookie_value, time() + 3600, "/"); 
-    } else if (isset($_REQUEST["colorPersonalitzat"])){
-        $cookie_value = $_REQUEST["colorPersonalitzat"];  
+    } else if (isset($_REQUEST["color_perso"]) && isset($_REQUEST["perso_checkbox"])){
+        $cookie_value = $_REQUEST["color_perso"];  
         setcookie($cookie_name, $cookie_value, time() + 3600, "/");
     } else if (isset($_REQUEST["reset"])){
         setcookie($cookie_name, $cookie_value, time() - 1, "/");
     }
-
-    header("Location: ../pagina4.php");
+    header("Location: pagina4.php");
 ?>
