@@ -1,26 +1,54 @@
 <?php
     include("includes/header.html");
+    require("session.php");
 ?>
-    <h1>Tria color</h1>
-    <label class="custom-radio">
-        <input type="radio" name="colorRadio" value="#FFFF00">
-    </label>
-    <label class="custom-radio">
-        <input type="radio" name="colorRadio" value="#FF7070">
-    </label>
-    <label class="custom-radio">
-        <input type="radio" name="colorRadio" value="#00AAFF">
-    </label>
-    <label class="custom-radio">
-        <input type="radio" name="colorRadio" value="#FF9500">
-    </label>
-    <label>
-        <input type="color" name="colorInput" value="#FFFFFF">
-    </label>
-    <label class="SubmitColor">
-        <input type="submit" value="EnviarColor">
-    </label>
-    
+ <h1>Pàgina 4 </h1>
+ <h1>Tria un dels 4 colors</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 5</title>
+    <link rel="Stylesheet" href="../COOKIES/styles/style.css">
+<?php
+    if(!isset($_SESSION["color_escogido"])){
+        $_SESSION["color_escogido"] = "#adfac6";
+    }
+?>
+    <style>
+        body {
+            background-color: <?php echo $_SESSION["color_escogido"];;?>;
+        }
+    </style>
+</head>
+<body>
+<form class="colorForm" action="cambiarColor.php" method="get">
+        <table>
+            <tr style="height: 30px;">
+                <td><input type="radio" name="color" value="yellow"></td>
+                <td><input type="radio" name="color" value="#FF7070"></td>
+                <td><input type="radio" name="color" value="#00AAFF"></td>
+                <td><input type="radio" name="color" value="#FF9500"></td>
+            </tr>
+            <tr style="height: 60px;">
+                <td style="background-color: #FFFF00;"></td>
+                <td style="background-color: #FF7070;"></td>
+                <td style="background-color: #00AAFF;"></td>
+                <td style="background-color: #FF9500;"></td>
+            </tr>
+        </table>
+        <br/>
+        <label for="perso_color">Utilitzar color personlitzat
+            <input type="checkbox" id="perso_color" name="perso_checkbox">
+            <input type="color" name="color_perso" value="<?php echo $_SESSION["color_escogido"];?>">
+        </label>
+        <br/>
+        <input type="submit" style="width: 200px;">
+        <input type="submit" name="reset" value="Reset" style="margin-top: 10px; width: 100px;">
+    </form>
+</body>
+</html>
 <?php
     include("includes/footer.html");
 ?>

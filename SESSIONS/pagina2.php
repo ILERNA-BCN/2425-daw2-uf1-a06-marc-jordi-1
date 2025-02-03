@@ -1,7 +1,12 @@
 <?php
     include("includes/header.html");
+    require("session.php");
 ?>
-
+<style>
+            body {
+            background-color: <?php echo $_SESSION["color_escogido"];?>;
+        }
+</style>
     <h1>PÀGINA 2</h1>
     <table>
             <tr>
