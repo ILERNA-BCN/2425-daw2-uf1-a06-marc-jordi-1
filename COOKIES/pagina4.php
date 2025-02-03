@@ -1,6 +1,5 @@
 <?php
     include("includes/header.html");
-
 ?>
     <style>
         html, body{
@@ -31,7 +30,7 @@
         <br/>
         <label for="perso_color">Utilitzar color personlitzat
             <input type="checkbox" id="perso_color" name="perso_checkbox">
-            <input type="color" name="color_perso" value="<?php if(isset($_COOKIE[$cookie_name])){echo $_COOKIE[$cookie_name];}else{echo "#adfac6";}?>">
+            <input type="color" name="color_perso" value="<?php if(isset($_COOKIE["Color_escogido"])){echo $_COOKIE["Color_escogido"];}else{echo "#adfac6";};?>">
         </label>
         <br/>
         <input type="submit" style="width: 200px;">
